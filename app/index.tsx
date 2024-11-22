@@ -9,7 +9,7 @@ const Welcome = () => {
             <SafeAreaView style={styles.safeArea}>
             <StatusBar backgroundColor={"#000000"} />
                 <View style={styles.container}>
-                    <Text style={styles.title}>Welcome to TaskMaster!</Text>
+                    <Text style={styles.title}>Welcome to Task AI!</Text>
                     <Text style={styles.subtitle}>
                         Organize your tasks efficiently and boost your productivity.
                     </Text>

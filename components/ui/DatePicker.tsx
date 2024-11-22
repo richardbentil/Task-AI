@@ -60,7 +60,7 @@ const DatePicker = ({setSelectedDate, selectedDate}: any) => {
           )}
         </>
       ) : (
-        <Text style={styles.errorText}>Calendar access is not granted.</Text>
+        <Text style={styles.errorText}></Text>
       )}
     </>
   );

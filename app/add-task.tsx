@@ -8,18 +8,19 @@ import {
   ScrollView,
   StatusBar,
   KeyboardAvoidingView,
+  Pressable
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Platform } from "react-native";
-import { useLocalSearchParams, useNavigation } from "expo-router";
+import { Link, useLocalSearchParams, useNavigation } from "expo-router";
 
 export default function AddPostScreen() {
   const navigation = useNavigation();
   const { task }: any = useLocalSearchParams(); // Get task parameter
   const parsedTask = task ? JSON.parse(task) : {}; // Parse JSON string
 
-  const [title, setTitle] = useState(parsedTask?.title ||"");
+  const [title, setTitle] = useState(parsedTask?.title || "");
   const [content, setContent] = useState("");
   const [backgroundColor, setBackgroundColor] = useState(parsedTask?.color || "");
   const [showColorPicker, setShowColorPicker] = useState(false);
@@ -27,9 +28,9 @@ export default function AddPostScreen() {
 
   //set header title
   useEffect(() => {
-    navigation.setOptions({title: parsedTask?.id ? "Edit task" : "New task"})
+    navigation.setOptions({ title: parsedTask?.id ? "Edit task" : "New task" })
   }, [])
-  
+
 
   const colorOptions = ["#ffffff", "#f8f9fa", "#f0e68c", "#ffebcd", "#e6e6fa"];
   const isFormComplete = title.trim() && content.trim();
@@ -53,13 +54,11 @@ export default function AddPostScreen() {
     <>
       <SafeAreaProvider>
         <SafeAreaView style={[styles.container, { backgroundColor }]}>
-       <StatusBar backgroundColor={"#000000"} />   
-        <KeyboardAvoidingView
+          <StatusBar backgroundColor={"#000000"} />
+          <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             style={styles.container}
           >
-           
-
             {/* Main Content Area */}
             <ScrollView contentContainerStyle={styles.contentContainer}>
               <TextInput
@@ -83,6 +82,19 @@ export default function AddPostScreen() {
             <View style={styles.bottomBar}>
               {/* Formatting and Color Picker Toggles */}
               <View style={styles.toggleContainer}>
+              {/* Formatting Button */}
+                <Link
+                    style={styles.formattingButton}
+                    href="/add-member"
+                  >
+                  <Ionicons name="person" size={24} color="#333" />
+                </Link>
+                <Link
+                    style={styles.formattingButton}
+                    href="/chat"
+                  >
+                  <MaterialCommunityIcons name="message" size={24} color="#333" />
+                </Link>
                 {/* Formatting Button */}
                 <TouchableOpacity
                   style={styles.formattingButton}
