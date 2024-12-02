@@ -1,50 +1,86 @@
-# Welcome to your Expo app 👋
+# ✅ Task AI
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to **Task AI**! This application simplifies project and task management, enabling users to create, update, and track tasks effortlessly. Collaborate with team members by inviting them to contribute, ensuring smooth and efficient teamwork.
 
-## Get started
+---
 
-1. Install dependencies
+![Welcome screen](./assets/images/screens/welcome-screen.png)
+![Home screen](./assets/images/screens/homescreen.png)
+![Add task](./assets/images/screens/add-edit-task.png)
+![Add team member](./assets/images/screens/add-member.png)
+
+> *Streamline your productivity with TaskMaster Pro.*
+
+---
+
+## 🚀 Features
+
+### 1. **Task Management**
+- Add new tasks with detailed descriptions, deadlines, and priorities.
+- Edit task details as project requirements evolve.
+- Update task statuses (e.g., In Progress, Completed).
+- Delete completed or unnecessary tasks.
+
+### 2. **Team Collaboration**
+- Invite team members to contribute to specific tasks.
+- Assign roles and responsibilities to collaborators.
+- Real-time updates to keep everyone on the same page.
+
+### 3. **Task Organization**
+- Categorize tasks by projects or tags.
+- View tasks by status, priority, or deadline.
+- Filter and search tasks for quick access.
+
+### 4. **Notifications**
+- Receive notifications for task updates or deadline reminders.
+- Alert team members of new assignments or changes.
+
+### 5. **Dashboard Insights**
+- Visualize task progress with charts and stats.
+- Monitor team contributions and project milestones.
+
+### 6. **Data Security**
+- Secure user authentication with JWT.
+- Role-based access control to ensure data integrity.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js
+- **Backend**: Node.js with Express
+- **Database**: MongoDB
+- **Authentication**: JSON Web Tokens (JWT) and OAuth 2.0
+- **Realtime Updates**: Socket.IO
+- **Cloud Storage**: Cloudinary for file attachments
+- **Push Notifications**: Firebase Cloud Messaging (FCM)
+
+---
+
+## 🔧 Installation and Setup
+
+### Prerequisites:
+- [Node.js](https://nodejs.org) installed on your machine.
+- [MongoDB](https://www.mongodb.com) database set up and running.
+- Environment variable configuration file (`.env`).
+
+### Steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/taskmaster-pro.git
+
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the app
 
    ```bash
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
